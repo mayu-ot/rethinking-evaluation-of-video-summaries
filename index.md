@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Short Introduction
+We assess the evaluation metric for video summarization.
+Our analysis of video summarization datasets demonstrates the evaluation frameworks have some issues.
 
-You can use the [editor on GitHub](https://github.com/mayu-ot/rethinking-evaluation-of-video-summaries/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Abstruct
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Video summarization is a technique to create a short skim of the original video while preserving the main stories/content. There exists a substantial interest in automatizing this process due to the rapid growth of the available material. The recent progress has been facilitated by public benchmark datasets, which enable easy and fair comparison of methods. Currently the established evaluation protocol is to compare the generated summary with respect to a set of reference summaries provided by the dataset. In this paper, we will provide in-depth assessment of this pipeline using two popular benchmark datasets. Surprisingly, we observe that randomly generated summaries achieve comparable or better performance to the state-of-the-art. In some cases, the random summaries outperform even the human generated summaries in leave-one-out experiments. Moreover, it turns out that the video segmentation, which is often considered as a fixed pre-processing method, has the most significant impact on the performance measure. Based on our observations, we propose alternative approaches for assessing the importance scores as well as an intuitive visualization of correlation between the estimated scoring and human annotations.
 
-### Markdown
+## Paper
+<img src="images/paper/thums_small.jpeg">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Results
 
-```markdown
-Syntax highlighted code block
+## Code
 
-# Header 1
-## Header 2
-### Header 3
+## Citation
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+@InProceedings{otani2018vsumeval,
+    title={Rethinking the Evaluation of Video Summaries},
+    author={Mayu Otani, Yuta Nakahima, Esa Rahtu, and Janne Heikkil{\"{a}}},
+    booktitle={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2019}
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mayu-ot/rethinking-evaluation-of-video-summaries/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
