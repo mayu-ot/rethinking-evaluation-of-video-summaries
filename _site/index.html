@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+
+  <title>Rethinking the Evaluation of Video Summaries - a project website for the paper "Rethinking the Evaluation of Video Summaries."</title>
+
+  <meta name="author" content="Mayu Otani" />
+
+  
+  <meta name="description" content="Mayu Otani, Yuta Nakahima, Esa Rahtu, and Janne Heikkilä">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Rethinking the Evaluation of Video Summaries - a project website for the paper "Rethinking the Evaluation of Video Summaries."" href="/rethinking-evaluation-of-video-summaries/feed.xml" />
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/rethinking-evaluation-of-video-summaries/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/rethinking-evaluation-of-video-summaries/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/rethinking-evaluation-of-video-summaries/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Rethinking the Evaluation of Video Summaries" />
+  
+
+   
+  <meta property="og:description" content="Mayu Otani, Yuta Nakahima, Esa Rahtu, and Janne Heikkilä">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/" />
+  <link rel="canonical" href="http://localhost:4000/" />
+  
+
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Rethinking the Evaluation of Video Summaries" />
+  
+
+  
+  <meta name="twitter:description" content="Mayu Otani, Yuta Nakahima, Esa Rahtu, and Janne Heikkilä">
+  
+
+  
+
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">Rethinking the Evaluation of Video Summaries</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+      </ul>
+    </div>
+
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Rethinking the Evaluation of Video Summaries</h1>
+		  
+		    
+            <hr class="small">
+            <span class="page-subheading">Mayu Otani, Yuta Nakahima, Esa Rahtu, and Janne Heikkilä</span>
+			
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+<h2>Short Introduction</h2>
+<p>
+We provide in-depth assessment of the evaluation pipeline for video summaries using two popular benchmark datasets: SumMe <a href="#fn1">[1]</a> and TVSum <a href="#fn2">[2]</a> . Surprisingly, we observe that randomly generated summaries achieve comparable or better performance to the state-of-the-art. In some cases, the random summaries outperform even the reference summaries in leave-one-out experiments. Moreover, it turns out that the video segmentation, which is often considered as a fixed pre-processing method, has the most significant impact on the performance measure.
+</p>
+
+<small>
+<ol>
+    <li id="fn1">
+        M. Gygli, H. Grabner, H. Riemenschneider, and L. van Gool, “Creating summaries from user videos,” in European Conference on Computer Vision (ECCV), 2014, pp. 505–520.
+    </li>
+    <li id="fn2">
+        Y. Song, J. Vallmitjana, A. Stent, and A. Jaimes, “TVSum : Summarizing Web Videos Using Titles,” in IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR), 2015, pp. 5179–5187.
+    </li>
+</ol>
+</small>
+
+<h2>Results</h2>
+
+<div style="text-align: center">
+<img src="assets/images/summe_random_eval.png" width=400>
+</div>
+<blockquote>
+        F1 scores for different segmentation and importance score combinations for SumMe. Light blue bars refer to random summaries and dark blue bars indicate scores of manually created reference summaries (leave-one-out test). Purple bars show the scores for DR-DSN importance scoring with different segmentation methods.
+</blockquote>
+
+<div style="text-align: center">
+<img src="assets/images/tvsum_random_eval.png" width=400>
+</div>
+<blockquote>
+        F1 scores for different segmentation methods combined to either random or human annotated importance scores (leave-one-out) for TVSum dataset. Light blue bars refer to random scores and dark blue bars indicates human annotations. Interestingly, the random and human annotations obtain similar F1 scores in most cases.
+</blockquote>
+
+<h2>Paper</h2>
+<a class="embedly-card" href="https://arxiv.org/abs/1903.11328">Rethinking the Evaluation of Video Summaries</a>
+
+<h2>Code</h2>
+<a class="embedly-card" href="https://github.com/mayu-ot/rethinking-evs">mayu-ot/rethinking-evs</a>
+
+<h2>Citation</h2>
+
+<pre>
+@InProceedings{otani2018vsumeval,
+    title={Rethinking the Evaluation of Video Summaries},
+    author={Mayu Otani, Yuta Nakahima, Esa Rahtu, and Janne Heikkil{\"{a}}},
+    booktitle={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2019}
+}
+</pre>
+
+
+	    
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="mailto:otani_mayu@cyberagent.co.jp" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      Mayu Otani
+      &nbsp;&bull;&nbsp;
+      2019
+
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/rethinking-evaluation-of-video-summaries/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/rethinking-evaluation-of-video-summaries/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/rethinking-evaluation-of-video-summaries/js/main.js"></script>
+    
+  
+
+
+  
+  </body>
+</html>
