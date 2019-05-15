@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Rethinking the Evaluation of Video Summaries
-subtitle: Mayu Otani<sup>1</sup>, Yuta Nakahima<sup>2</sup>, Esa Rahtu<sup>3</sup>, and Janne Heikkilä<sup>4</sup><br><sup>1</sup>CyberAgent, Inc. <sup>2</sup>Osaka University <sup>3</sup>Tampere University <sup>4</sup>University of Oulu
+authors: ["Mayu Otani<sup>1</sup>", "Yuta Nakahima<sup>2</sup>", "Esa Rahtu<sup>3</sup>", "Janne Heikkilä<sup>4</sup>"]
+affiliations: ["<sup>1</sup>CyberAgent, Inc.", "<sup>2</sup>Osaka University", "<sup>3</sup>Tampere University", "<sup>4</sup>University of Oulu"]
 use-site-title: true
 ---
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
@@ -22,21 +23,34 @@ We provide in-depth assessment of the evaluation pipeline for video summaries us
 </ol>
 </small>
 
-<h2>Results</h2>
+<h2>Experimental Results</h2>
+<p>
+We devise a randomization test to validate evaluation frameworks. In the experiments we generate video summaries that are independent of video content by utilising random importance scores and random video segment boundaries. F1 scores obtained by these randomized (and partially randomized) summaries serve as a baseline that can be achieved completely by chance.
+</p>
 
+<h3>Evaluation on SumMe</h3>
 <div style="text-align: center">
 <img src="assets/images/summe_random_eval.png" width=400>
 </div>
-<blockquote>
+<p>
         F1 scores for different segmentation and importance score combinations for SumMe. Light blue bars refer to random summaries and dark blue bars indicate scores of manually created reference summaries (leave-one-out test). Purple bars show the scores for DR-DSN importance scoring with different segmentation methods.
-</blockquote>
+</p>
 
+<h3>Evaluation on TVSum</h3>
 <div style="text-align: center">
 <img src="assets/images/tvsum_random_eval.png" width=400>
 </div>
-<blockquote>
+<p>
         F1 scores for different segmentation methods combined to either random or human annotated importance scores (leave-one-out) for TVSum dataset. Light blue bars refer to random scores and dark blue bars indicates human annotations. Interestingly, the random and human annotations obtain similar F1 scores in most cases.
-</blockquote>
+</p>
+
+<h3>Effects of Video Segmentation</h3>
+<div style="text-align: center">
+<img src="assets/images/shortseg_selected_two_peak.png" width=400>
+</div>
+<p>
+        The results can be understood by examining how the segment length affects on selection procedure in the knapsack formulation that is most commonly adopted in video summarization methods. Segment selection as a knapsack problem penalize long segments, thus only short segments are highly likely to be selected.
+</p>
 
 <h2>Paper</h2>
 <a class="embedly-card" href="https://arxiv.org/abs/1903.11328">Rethinking the Evaluation of Video Summaries</a>
